@@ -26,7 +26,7 @@ SECRET_KEY = 'cns)w%85lx2mj=cqud=^l-^&0=ogkt%%qdy+b@_o1+lrd@c1km'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zshi3.pythonanywhere.com', 'localhost']
 
 
 # Application definition
