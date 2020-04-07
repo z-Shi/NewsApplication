@@ -1,0 +1,26 @@
+{% extends 'rango/base.html' %}
+{% load static %}
+
+{% block title_block %}
+    HomePage
+{% endblock %}
+
+{% block body_block %}
+    <h1>Latest News</h1>
+    <p>Welcome to the News Application! Here you can view the latest stories uploaded by our staff!</p>
+
+    {% if stories %}
+
+        {% for story in stories %}
+            <h3>{{ story.heading }}</h3>
+            <h4>{{ story.publication_date }}</h4>
+            <p>{{ story.content }}</p>
+        {% endfor %}
+
+    {% else %}
+
+        <strong>There are no stories present!</strong>
+
+    {% endif %}
+
+{% endblock %}
