@@ -1,0 +1,4 @@
+.idea/
+*.iml
+*.pyc
+db.sqlite3
