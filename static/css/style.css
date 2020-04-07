@@ -1,0 +1,38 @@
+:root {
+--colour-navy: #0a192f;
+--colour-light-navy: #172a45;
+--colour-lighter-slate: #ccd6f6;
+--colour-white: #e6f1ff;
+--colour-green: #64ffda;
+}
+
+body {
+	background-color: var(--colour-navy);
+	padding: 20px;
+	margin: 0px;
+}
+
+header h1 {
+    color: var(--colour-green);
+}
+
+header p {
+    color: var(--colour-white);
+}
+
+.story {
+    background-color: var(--colour-light-navy);
+    padding: 20px;
+}
+
+.heading {
+    color: var(--colour-green);
+}
+
+.content {
+    color: var(--colour-white);
+}
+
+.publication_date {
+    color: var(--colour-lighter-slate);
+}

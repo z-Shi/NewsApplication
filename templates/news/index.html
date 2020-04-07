@@ -6,15 +6,21 @@
 {% endblock %}
 
 {% block body_block %}
-    <h1>Latest News</h1>
-    <p>Welcome to the News Application! Here you can view the latest stories uploaded by our staff!</p>
+    <header>
+        <h1>Latest News</h1>
+        <p>Welcome to the News Application! Here you can view the latest stories uploaded by our staff!</p>
+    </header>
 
     {% if stories %}
 
         {% for story in stories %}
-            <h3>{{ story.heading }}</h3>
-            <h4>{{ story.publication_date }}</h4>
-            <p>{{ story.content }}</p>
+            <section class="story">
+                <h3 class="heading">{{ story.heading }}</h3>
+                <h4 class="publication_date">{{ story.publication_date }}</h4>
+                <p class="content">{{ story.content }}</p>
+            </section>
+
+            <br />
         {% endfor %}
 
     {% else %}

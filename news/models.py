@@ -14,5 +14,8 @@ class Story(models.Model):
         self.last_visit = timezone.now()
         super(Story, self).save(*args, **kwargs)
 
+    class Meta:
+        verbose_name_plural = 'Stories'
+
     def __str__(self):
         return self.heading
