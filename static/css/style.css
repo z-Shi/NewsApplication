@@ -20,6 +20,14 @@ header p {
     color: var(--colour-white);
 }
 
+button {
+    border-radius: 5px;
+    border-color: var(--colour-white);
+    background-color: var(--colour-navy);
+    color: var(--colour-green);
+    padding: 5px;
+}
+
 .story {
     background-color: var(--colour-light-navy);
     padding: 20px;

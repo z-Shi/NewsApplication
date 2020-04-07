@@ -1,0 +1,16 @@
+{% if stories %}
+    {% for story in stories %}
+        <section class="story">
+            <h3 class="heading">{{ story.heading }}</h3>
+            <h4 class="publication_date">{{ story.publication_date }}</h4>
+            <p class="content">{{ story.content }}</p>
+        </section>
+
+        <br />
+    {% endfor %}
+
+    <button class="view_more_btn" data-results="{{ stories|length }}">View Three More Stories...</button>
+
+{% else %}
+    <strong class="heading">There are no stories present!</strong>
+{% endif %}
