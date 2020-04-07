@@ -1,3 +1,18 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+
+class Story(models.Model):
+    MAX_HEADING_LENGTH = 128
+    MAX_CONTENT_LENGTH = 512
+
+    heading = models.CharField(max_length=MAX_HEADING_LENGTH)
+    content = models.CharField(max_length=MAX_CONTENT_LENGTH)
+    publication_date = models.DateTimeField(blank=True)
+
+    def save(self, *args, **kwargs):
+        self.last_visit = timezone.now()
+        super(Story, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.heading

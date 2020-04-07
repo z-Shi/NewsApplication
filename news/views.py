@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View
+from news.models import Story
 
 
 class NewsView(View):
