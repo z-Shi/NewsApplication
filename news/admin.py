@@ -1,3 +1,9 @@
 from django.contrib import admin
+from news.models import Story
 
-# Register your models here.
+
+class StoryAdmin(admin.ModelAdmin):
+    list_display = ('heading', 'publication_date', 'content')
+
+
+admin.site.register(Story, StoryAdmin)
